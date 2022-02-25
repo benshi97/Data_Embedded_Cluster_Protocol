@@ -1,13 +1,7 @@
-from ase import io
-import ase
-import math
-from ase.units import Hartree,Bohr
 from matplotlib.ticker import FormatStrFormatter
 import pandas as pd
 
 import numpy as np
-from scipy.stats import norm
-from scipy import stats
 import matplotlib.mlab as mlab
 from matplotlib.gridspec import GridSpec
 from matplotlib.ticker import FormatStrFormatter
@@ -22,14 +16,11 @@ plt.rcParams.update({
     "font.size": 9,
     "text.usetex": True,     # use inline math for ticks
     "pgf.rcfonts": False,    # don't setup fonts from rc parameters
-    "pgf.preamble": [        # load additional packages 
-         "\\usepackage{amsmath}",  
-         "\\usepackage{amssymb}",  
-         "\\usepackage[mathrm=sym]{unicode-math}", # unicode math setup
-         r"\newcommand{\minus}{\scalebox{0.5}[1.0]{$-$}}" # serif font via preamble
-         ]
 })
 import extrapolate
+
+Hartree = 27.211386245988
+Bohr = 0.5291772105638411
 
 
 color_dict = {'red':'#e6194b',
