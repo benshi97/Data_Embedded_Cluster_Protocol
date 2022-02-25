@@ -1,0 +1,24 @@
+calc=SCF
+dft=PBE0
+scftype=uks
+verbosity=3
+mem=4GB
+symm=off
+unit=angs
+scfiguess=small
+mult=3
+
+basis=special
+def2-TZVPP
+
+basis_sm=special
+def2-SVP
+
+dfbasis_scf=special
+def2-QZVPP-RI-JK
+
+unit=angs
+geom=xyz
+1
+
+O     0.00000000000    0.00000000000    0.00000000000

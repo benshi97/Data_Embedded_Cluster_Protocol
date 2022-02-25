@@ -1,0 +1,25 @@
+calc=DF-CCSD(T)
+verbosity=3
+mem=170GB
+symm=off
+unit=angs
+scfiguess=small
+scfmaxit=1000
+
+
+core=2
+mult=3
+basis=def2-TZVPP
+
+basis_sm=def2-SVP
+
+dfbasis_scf=def2-QZVPP-RI-JK
+
+dfbasis_cor=def2-TZVPP-RI
+
+unit=angs
+geom=xyz
+2
+
+O     0.00000000000    0.00000000000    0.00000000000
+O     0.00000000000    0.00000000000    1.20739000000 

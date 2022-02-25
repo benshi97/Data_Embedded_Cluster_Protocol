@@ -1,0 +1,1435 @@
+ **********************************************************************
+                          MRCC program system
+ **********************************************************************
+ 
+                              Written by
+ Mihaly Kallay, Peter R. Nagy, David Mester, Zoltan Rolik, Gyula Samu,
+   Jozsef Csontos, Jozsef Csoka, P. Bernat Szabo, Laszlo Gyevi-Nagy,
+    Bence Hegely, Istvan Ladjanszki, Lorant Szegedy, Bence Ladoczki,
+       Klara Petrov, Mate Farkas, Pal D. Mezei, and Adam Ganyecz
+ 
+        Department of Physical Chemistry and Materials Science
+            Budapest University of Technology and Economics
+                  Budapest P.O.Box 91, H-1521 Hungary
+ 
+                              www.mrcc.hu
+ 
+                    Release date: February 22, 2020
+
+ ************************ 2021-11-29 13:58:46 *************************
+ Executing minp...
+
+ Reading input from MINP...
+ 
+ Input file:
+ 
+calc=DSDPBEP86
+verbosity=3
+mem=170GB
+symm=off
+unit=angs
+scfiguess=small
+scfmaxit=1000
+
+
+core=1
+mult=3
+basis=def2-QZVPP
+
+basis_sm=def2-SVP
+
+dfbasis_scf=def2-QZVPP-RI-JK
+
+dfbasis_cor=def2-QZVPP-RI
+
+unit=angs
+geom=xyz
+2
+
+O     0.00000000000    0.00000000000    0.00000000000
+O     0.00000000000    0.00000000000    1.20739000000
+
+ghost=serialno
+2
+ 
+ 
+ Checking keyword combinations...
+ 
+ Keywords:
+ 
+ active=none
+ agrid=ld0006-ld0590
+ basis=def2-qzvpp
+ basis_sm=def2-svp
+ basopt=off
+ bfbasis=none
+ bfgsmem=10
+ bfgstol=1.0d-3
+ bpcompo=0.985
+ bpcompv=0.98
+ bpdfo=0.985
+ bpocc=0.985
+ bppdo=0.985
+ bppdv=0.98
+ bpedo=0.985
+ bpedv=0.98
+ calc=mp2
+ ccmaxit=50
+ ccprog=mrcc
+ ccsdalg=disk
+ ccsdmkl=seq
+ ccsdrest=off
+ ccsdthreads=2
+ cctol=6
+ charge=0
+ cialg=disk
+ ciguess=off
+ cmpgrp=auto
+ core=1
+ corembed=off
+ csapprox=off
+ dboc=off
+ dendec=cholesky
+ dens=0
+ dfalg=lineq
+ dfbasis_cor=def2-qzvpp-ri
+ dfbasis_scf=def2-qzvpp-ri-jk
+ dfintran=drpa
+ dft=dsdpbep86
+ dhexc=adc(2)
+ diag=david
+ docc=
+ domrad=10.d0
+ drpaalg=fit
+ dual=off
+ ecp=auto
+ edisp=off
+ edisp_embed=off
+ embed=off
+ epert=none
+ eps=0.975
+ excrad=0.d0
+ excrad_fin=0.000000000D+00
+ fmm=off
+ fmmord=8
+ freq=off
+ gauss=spher
+ geom=xyz
+ gopt=off
+ ghost=serialno
+ gtol=7
+ grdens=off
+ grtol=10
+ hamilton=dc
+ iface=none
+ intalg=auto
+ itol=10
+ laptol=1.d-2
+ lccoporder=trffirst
+ lcorthr=normal
+ lccrest=off
+ lmp2dens=on
+ lnoepso=0.d0
+ lnoepsv=1e-6
+ localcc=off
+ localcorrsymm=off
+ locintrf=disk
+ mact=
+ maxact=off
+ maxdim=100
+ maxex=0
+ maxmicroit=100
+ mcscfiguess=hf
+ mem=170gb
+ molden=on
+ mpitasks=1
+ mulmet=0
+ mult=3
+ nacto=0
+ nactv=0
+ naf_cor=off
+ naf_scf=off
+ nafalg=albe
+ naftyp=
+ nchol=auto
+ ndeps=1e-3
+ nstate=1
+ nsing=0
+ ntrip=0
+ occ=
+ oniom=off
+ oniom_eechg=off
+ oniom_pcm=off
+ optalg=
+ optmaxit=50
+ optetol=1e-6
+ optex=   0
+ optgtol=1e-4
+ optstol=1e-3
+ orblocc=off
+ orbloce=off
+ orbloco=off
+ orblocv=off
+ orblocguess=cholesky
+ osveps=1e-3
+ ovirt=off
+ ovltol=1e-7
+ ovosnorb=80.0
+ pcm=off
+ popul=off
+ pressure=100000
+ pssp=off
+ ptfreq=0.0
+ ptthreads=2
+ qscf=off
+ qmmm=off
+ redcost_exc=off
+ redcost_tddft=off
+ refdet=none
+ rest=0
+ rgrid=log3
+ rohfcore=semicanonical
+ rohftype=semicanonical
+ scfalg=auto
+ scfdamp=off
+ scfdiis=on
+ scfdiis_end=1000
+ scfdiis_start=1
+ scfdiis_step=1
+ scfdtol=7
+ scfext=10
+ scfguessdens=
+ scfiguess=small
+ scflshift=off
+ scfmaxit=1000
+ scftype=uhf
+ scftol=6
+ scspe=1.d0
+ scsph=1.d0
+ scsps=1.2d0
+ scspt=0.33333333333333
+ scspv=1.d0
+ spairtol=1e-4
+ subminp=top
+ symm=0
+ talg=occ
+ temp=298.15
+ test=off
+ theodore=off
+ tlmo=0.999
+ tpao=0.94
+ tprint=off
+ uncontract=off
+ unit=angs
+ usedisk=2
+ verbosity=3
+ wpairtol=0.100000000E-05
+ 
+ Calculating integrals for small-basis SCF...
+
+ ************************ 2021-11-29 13:58:46 *************************
+ Executing integ...
+
+ Allocation of 170.0 Gbytes of memory...
+ 
+ 
+ Number of atoms:                  2
+ Charge:                           0
+ Number of electrons:              8
+ Number of core electrons:         2
+ Spin multiplicity:                3
+ 
+                 Cartesian coordinates [bohr]      Atomic mass [AMU]  Z
+   1  O     0.00000000    0.00000000    0.00000000    15.994915       8
+   2  O     0.00000000    0.00000000    2.28163643     0.000000       0
+ 
+ This molecule is linear.
+ 
+ Point group: Cxv 
+ Computational point group: C1  
+ 
+ Cartesian coordinates in standard orientation [bohr]
+   1  O     0.00000000    0.00000000   -0.20742149
+   2  O     0.00000000    0.00000000    2.07421493
+ 
+ Nuclear repulsion energy [au]:          0.000000000000
+ 
+ 
+ Basis set information:
+ 
+ Maximum angular momentum: g
+ Maximum number of contracted Gaussians:   10
+ Maximum number of primitive Gaussians:    14
+ Spherical harmonic GTOs are used.
+ 
+ 
+ Conventional basis set:
+ 
+    1  O  def2-svp [ 7s 4p 1d | 3s 2p 1d ]
+    2  O  def2-svp [ 7s 4p 1d | 3s 2p 1d ]
+ 
+ Basis functions:
+            1             2             3             4             5             6             7             8             9            10
+    0    1O1s          1O2s          1O3s          1O1pz         1O1py         1O1px         1O2pz         1O2py         1O2px         1O1d-2    
+    1    1O1d-1        1O1d0         1O1d+1        1O1d+2        2O1s          2O2s          2O3s          2O1pz         2O1py         2O1px     
+    2    2O2pz         2O2py         2O2px         2O1d-2        2O1d-1        2O1d0         2O1d+1        2O1d+2    
+ 
+ Maximum number of basis functions per shell:    6
+ Total number of basis functions:     28
+ 
+ 
+ Fitting basis set for the SCF calculation:
+ 
+    1  O  def2-qzvpp-ri-jk [ 14s 10p 6d 2f 1g | 10s 8p 4d 2f 1g ]
+    2  O  def2-qzvpp-ri-jk [ 14s 10p 6d 2f 1g | 10s 8p 4d 2f 1g ]
+ 
+ Basis functions:
+            1             2             3             4             5             6             7             8             9            10
+    0    1O1s          1O2s          1O3s          1O4s          1O5s          1O6s          1O7s          1O8s          1O9s          1O10s     
+    1    1O1pz         1O1py         1O1px         1O2pz         1O2py         1O2px         1O3pz         1O3py         1O3px         1O4pz     
+    2    1O4py         1O4px         1O5pz         1O5py         1O5px         1O6pz         1O6py         1O6px         1O7pz         1O7py     
+    3    1O7px         1O8pz         1O8py         1O8px         1O1d-2        1O1d-1        1O1d0         1O1d+1        1O1d+2        1O2d-2    
+    4    1O2d-1        1O2d0         1O2d+1        1O2d+2        1O3d-2        1O3d-1        1O3d0         1O3d+1        1O3d+2        1O4d-2    
+    5    1O4d-1        1O4d0         1O4d+1        1O4d+2        1O1f-3        1O1f-2        1O1f-1        1O1f0         1O1f+1        1O1f+2    
+    6    1O1f+3        1O2f-3        1O2f-2        1O2f-1        1O2f0         1O2f+1        1O2f+2        1O2f+3        1O1g-4        1O1g-3    
+    7    1O1g-2        1O1g-1        1O1g0         1O1g+1        1O1g+2        1O1g+3        1O1g+4        2O1s          2O2s          2O3s      
+    8    2O4s          2O5s          2O6s          2O7s          2O8s          2O9s          2O10s         2O1pz         2O1py         2O1px     
+    9    2O2pz         2O2py         2O2px         2O3pz         2O3py         2O3px         2O4pz         2O4py         2O4px         2O5pz     
+   10    2O5py         2O5px         2O6pz         2O6py         2O6px         2O7pz         2O7py         2O7px         2O8pz         2O8py     
+   11    2O8px         2O1d-2        2O1d-1        2O1d0         2O1d+1        2O1d+2        2O2d-2        2O2d-1        2O2d0         2O2d+1    
+   12    2O2d+2        2O3d-2        2O3d-1        2O3d0         2O3d+1        2O3d+2        2O4d-2        2O4d-1        2O4d0         2O4d+1    
+   13    2O4d+2        2O1f-3        2O1f-2        2O1f-1        2O1f0         2O1f+1        2O1f+2        2O1f+3        2O2f-3        2O2f-2    
+   14    2O2f-1        2O2f0         2O2f+1        2O2f+2        2O2f+3        2O1g-4        2O1g-3        2O1g-2        2O1g-1        2O1g0     
+   15    2O1g+1        2O1g+2        2O1g+3        2O1g+4    
+ 
+ Maximum number of basis functions per shell:   24
+ Total number of basis functions:    154
+ 
+ 
+ Generating atomic densities for the SCF calculation...
+ CPU time [min]:     0.124                   Wall time [min]:     0.018
+ 
+ Character table for point group C1:
+ 
+          E  
+    A     1
+ 
+ Number of basis functions per irrep:
+    A      28
+ 
+ 
+ Density functional: DSDPBEP86
+ Constructing integration grid for DFT...
+ Angular integration grid: adaptive 590-point Lebedev quadrature
+ Radial integration grid: Log3 quadrature
+ Total number of grid points: 21132       
+ CPU time [min]:     0.481                   Wall time [min]:     0.029
+ 
+ Calculation of overlap integrals...
+ CPU time [min]:     0.483                   Wall time [min]:     0.029
+ 
+ Calculation of the square root of the overlap matrix...
+ Minimum eigenvalue of the overlap matrix: 0.150377E-01
+ CPU time [min]:     0.490                   Wall time [min]:     0.029
+ 
+ Calculation of kinetic energy integrals...
+ CPU time [min]:     0.490                   Wall time [min]:     0.029
+ Calculation of nuclear attraction integrals...
+ CPU time [min]:     0.491                   Wall time [min]:     0.029
+ 
+ Calculation of prescreening integrals...
+ CPU time [min]:     0.496                   Wall time [min]:     0.029
+ 
+ Calculation of two-center Coulomb integrals...
+   5% done.
+  20% done.
+  32% done.
+  52% done.
+  72% done.
+  89% done.
+ 100% done.
+ CPU time [min]:     0.503                   Wall time [min]:     0.029
+ 
+ Calculation of inverse square root of the two-center integral matrix...
+ CPU time [min]:     0.540                   Wall time [min]:     0.030
+ 
+ Calculation of three-center Coulomb integrals...
+   1% done.
+  26% done.
+  38% done.
+  68% done.
+ 100% done.
+ CPU time [min]:     0.551                   Wall time [min]:     0.030
+ 
+ Running small-basis SCF...
+
+ ************************ 2021-11-29 13:58:48 *************************
+ Executing scf...
+
+ @scfsetup: integrals taken from disk
+            mrcc/integ binary format
+ @scfsetup: calculating on full matrices
+            not using symmetry adapted basis
+ @scfsetup: diis switched on
+ @scfsetup: number of steps to extrapolate from  10
+ @scfsetup: tolerance in energy deviation    0.100000E-05
+            tolerance in density deviation    0.100000E-06
+ @scfsetup: maximum number of iterations:1000
+ @scfsetup: unrestricted hf calc
+ @scfsetup: starting scf from superposition of atomic densities
+ @scfsetup: occupation set:
+            from initial orbitals
+ @scfsetup: diis runs from iteration:   1
+ @scfsetup: diis runs to iteration:1000
+ @scfsetup: diis runs in every iteration
+ Allocation of 170.0 Gbytes of memory...
+ ======================================================================
+ ITERATION STEP   1
+ CPU time [min]:     0.006                   Wall time [min]:     0.002
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     0.016                   Wall time [min]:     0.003
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.403024201632
+                   0.4300*P86 [au]:     -0.112285762239
+ Exchange-correlation energy  [au]:     -2.515309963871
+ CPU time [min]:     0.142                   Wall time [min]:     0.007
+ 
+ Coulomb energy + HF exchange [au]:     29.936270647388
+ Gradient norm:      6.5953E-01
+ RMS of alpha difference density:                      0.00263747053933
+ RMS of beta  difference density:                      0.00118763344380
+ Gap [au]:  0.46274507
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   1 IS            -74.7832468723123043 [AU]
+ ======================================================================
+ ITERATION STEP   2
+ CPU time [min]:     0.146                   Wall time [min]:     0.007
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     0.153                   Wall time [min]:     0.007
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.465335824294
+                   0.4300*P86 [au]:     -0.112703122078
+ Exchange-correlation energy  [au]:     -2.578038946372
+ CPU time [min]:     0.290                   Wall time [min]:     0.011
+ 
+ Coulomb energy + HF exchange [au]:     30.284842811742
+ Gradient norm:      1.3628E-01
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.01537823430030
+ RMS of alpha difference density:                      0.00861846156259
+ RMS of beta  difference density:                      0.00330594487844
+ Gap [au]:  0.48257262
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   2 IS            -74.8958137247046665 [AU]
+ ======================================================================
+ ITERATION STEP   3
+ CPU time [min]:     0.300                   Wall time [min]:     0.012
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     0.314                   Wall time [min]:     0.012
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.480452332693
+                   0.4300*P86 [au]:     -0.112805125192
+ Exchange-correlation energy  [au]:     -2.593257457885
+ CPU time [min]:     0.453                   Wall time [min]:     0.016
+ 
+ Coulomb energy + HF exchange [au]:     31.563311614479
+ Gradient norm:      2.9249E-01
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00819748391772
+ RMS of alpha difference density:                      0.00349619636630
+ RMS of beta  difference density:                      0.00325353863460
+ Gap [au]:  0.46726736
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   3 IS            -74.8084053131093896 [AU]
+ ======================================================================
+ ITERATION STEP   4
+ CPU time [min]:     0.457                   Wall time [min]:     0.016
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     0.466                   Wall time [min]:     0.017
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.449810005905
+                   0.4300*P86 [au]:     -0.112264205016
+ Exchange-correlation energy  [au]:     -2.562074210922
+ CPU time [min]:     0.590                   Wall time [min]:     0.020
+ 
+ Coulomb energy + HF exchange [au]:     30.933239672469
+ Gradient norm:      2.7817E-02
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00057571124699
+ RMS of alpha difference density:                      0.00009849957522
+ RMS of beta  difference density:                      0.00028571044221
+ Gap [au]:  0.46360019
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   4 IS            -74.8200815313715850 [AU]
+ ======================================================================
+ ITERATION STEP   5
+ CPU time [min]:     0.595                   Wall time [min]:     0.020
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     0.606                   Wall time [min]:     0.020
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.448411483860
+                   0.4300*P86 [au]:     -0.112226180149
+ Exchange-correlation energy  [au]:     -2.560637664009
+ CPU time [min]:     0.720                   Wall time [min]:     0.023
+ 
+ Coulomb energy + HF exchange [au]:     30.901905512895
+ Gradient norm:      7.3395E-03
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00011544846408
+ RMS of alpha difference density:                      0.00002684994289
+ RMS of beta  difference density:                      0.00011749569744
+ Gap [au]:  0.46251641
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   5 IS            -74.8201381835065291 [AU]
+ ======================================================================
+ ITERATION STEP   6
+ CPU time [min]:     0.724                   Wall time [min]:     0.024
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     0.735                   Wall time [min]:     0.024
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.448114384611
+                   0.4300*P86 [au]:     -0.112212639426
+ Exchange-correlation energy  [au]:     -2.560327024038
+ CPU time [min]:     0.840                   Wall time [min]:     0.027
+ 
+ Coulomb energy + HF exchange [au]:     30.894924528404
+ Gradient norm:      1.5989E-03
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00003662568891
+ RMS of alpha difference density:                      0.00003318980963
+ RMS of beta  difference density:                      0.00001732727769
+ Gap [au]:  0.46233374
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   6 IS            -74.8201427124850795 [AU]
+ ======================================================================
+ ITERATION STEP   7
+ CPU time [min]:     0.844                   Wall time [min]:     0.027
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     0.855                   Wall time [min]:     0.027
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.448243813781
+                   0.4300*P86 [au]:     -0.112211913560
+ Exchange-correlation energy  [au]:     -2.560455727341
+ CPU time [min]:     0.955                   Wall time [min]:     0.029
+ 
+ Coulomb energy + HF exchange [au]:     30.897370501803
+ Gradient norm:      1.0162E-04
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000278758135
+ RMS of alpha difference density:                      0.00000162490028
+ RMS of beta  difference density:                      0.00000146005177
+ Gap [au]:  0.46232588
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   7 IS            -74.8201431017741641 [AU]
+ ======================================================================
+ ITERATION STEP   8
+ CPU time [min]:     0.960                   Wall time [min]:     0.030
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     0.971                   Wall time [min]:     0.030
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.448239393512
+                   0.4300*P86 [au]:     -0.112211775577
+ Exchange-correlation energy  [au]:     -2.560451169089
+ CPU time [min]:     1.055                   Wall time [min]:     0.032
+ 
+ Coulomb energy + HF exchange [au]:     30.897274690878
+ Gradient norm:      2.6387E-05
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000060956684
+ RMS of alpha difference density:                      0.00000041792307
+ RMS of beta  difference density:                      0.00000023092741
+ Gap [au]:  0.46232424
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   8 IS            -74.8201431037639679 [AU]
+ ======================================================================
+ ITERATION STEP   9
+ CPU time [min]:     1.059                   Wall time [min]:     0.032
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     1.070                   Wall time [min]:     0.032
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.448237745589
+                   0.4300*P86 [au]:     -0.112211754279
+ Exchange-correlation energy  [au]:     -2.560449499868
+ CPU time [min]:     1.154                   Wall time [min]:     0.034
+ 
+ Coulomb energy + HF exchange [au]:     30.897241882017
+ Gradient norm:      6.1702E-06
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000014274199
+ RMS of alpha difference density:                      0.00000011597303
+ RMS of beta  difference density:                      0.00000009718618
+ Gap [au]:  0.46232386
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   9 IS            -74.8201431038798717 [AU]
+ ======================================================================
+ ITERATION STEP  10
+ CPU time [min]:     1.158                   Wall time [min]:     0.035
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     1.169                   Wall time [min]:     0.035
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.448237738610
+                   0.4300*P86 [au]:     -0.112211752711
+ Exchange-correlation energy  [au]:     -2.560449491321
+ CPU time [min]:     1.250                   Wall time [min]:     0.037
+ 
+ Coulomb energy + HF exchange [au]:     30.897241978579
+ Gradient norm:      2.0059E-06
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000004317610
+ RMS of alpha difference density:                      0.00000003576924
+ RMS of beta  difference density:                      0.00000004559322
+ Gap [au]:  0.46232400
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP  10 IS            -74.8201431038891371 [AU]
+ ======================================================================
+ 
+ SUCCESS...
+ THE SCF ITERATION HAS CONVERGED!
+ 
+                   A   
+ FINAL ALPHA OCC:   5
+ FINAL BETA  OCC:   3
+ 
+ ***FINAL KOHN-SHAM ENERGY:           -74.8201431038891371 [AU]
+ 
+ Expectation value of S^2:  2.0040
+ Average multiplicity:      3.0027
+ 
+ Orbital energies [au]:
+      Irrep         Alpha          Beta
+    1   A        -20.160905     -20.091250
+    2   A         -1.239887      -0.971380
+    3   A         -0.610490      -0.447795
+ 
+    4   A         -0.610468       0.014529
+    5   A         -0.519876       0.018744
+ 
+    6   A          0.391288       0.432300
+    7   A          0.644978       0.673713
+    8   A          0.658139       0.684922
+    9   A          0.827732       0.892211
+   10   A          1.035866       1.124655
+   11   A          1.056030       1.151780
+   12   A          1.089407       1.199661
+   13   A          1.181072       1.295628
+   14   A          1.949311       1.980078
+   15   A          2.645215       2.806457
+   16   A          2.700597       2.833668
+   17   A          2.714303       2.837847
+   18   A          2.716220       2.840207
+   19   A          3.068585       3.211644
+   20   A          4.106564       4.121285
+   21   A          4.106692       4.121644
+   22   A          4.537070       4.586309
+   23   A          4.554953       4.587138
+   24   A          4.926863       4.946672
+   25   A          5.215676       5.232736
+   26   A          5.219496       5.234153
+   27   A          5.986920       6.047136
+   28   A         34.141974      34.156120
+ 
+ RETURNING FROM SCF ALGORITHM
+ ======================================================================
+
+ ************************ 2021-11-29 13:58:50 *************************
+ Executing integ...
+
+ Allocation of 170.0 Gbytes of memory...
+ 
+ 
+ Number of atoms:                  2
+ Charge:                           0
+ Number of electrons:              8
+ Number of core electrons:         2
+ Spin multiplicity:                3
+ 
+                 Cartesian coordinates [bohr]      Atomic mass [AMU]  Z
+   1  O     0.00000000    0.00000000    0.00000000    15.994915       8
+   2  O     0.00000000    0.00000000    2.28163643     0.000000       0
+ 
+ This molecule is linear.
+ 
+ Point group: Cxv 
+ Computational point group: C1  
+ 
+ Cartesian coordinates in standard orientation [bohr]
+   1  O     0.00000000    0.00000000   -0.20742149
+   2  O     0.00000000    0.00000000    2.07421493
+ 
+ Nuclear repulsion energy [au]:          0.000000000000
+ 
+ 
+ Basis set information:
+ 
+ Maximum angular momentum: h
+ Maximum number of contracted Gaussians:   10
+ Maximum number of primitive Gaussians:    15
+ Spherical harmonic GTOs are used.
+ 
+ 
+ Conventional basis set:
+ 
+    1  O  def2-qzvpp [ 15s 8p 3d 2f 1g | 7s 4p 3d 2f 1g ]
+    2  O  def2-qzvpp [ 15s 8p 3d 2f 1g | 7s 4p 3d 2f 1g ]
+ 
+ Basis functions:
+            1             2             3             4             5             6             7             8             9            10
+    0    1O1s          1O2s          1O3s          1O4s          1O5s          1O6s          1O7s          1O1pz         1O1py         1O1px     
+    1    1O2pz         1O2py         1O2px         1O3pz         1O3py         1O3px         1O4pz         1O4py         1O4px         1O1d-2    
+    2    1O1d-1        1O1d0         1O1d+1        1O1d+2        1O2d-2        1O2d-1        1O2d0         1O2d+1        1O2d+2        1O3d-2    
+    3    1O3d-1        1O3d0         1O3d+1        1O3d+2        1O1f-3        1O1f-2        1O1f-1        1O1f0         1O1f+1        1O1f+2    
+    4    1O1f+3        1O2f-3        1O2f-2        1O2f-1        1O2f0         1O2f+1        1O2f+2        1O2f+3        1O1g-4        1O1g-3    
+    5    1O1g-2        1O1g-1        1O1g0         1O1g+1        1O1g+2        1O1g+3        1O1g+4        2O1s          2O2s          2O3s      
+    6    2O4s          2O5s          2O6s          2O7s          2O1pz         2O1py         2O1px         2O2pz         2O2py         2O2px     
+    7    2O3pz         2O3py         2O3px         2O4pz         2O4py         2O4px         2O1d-2        2O1d-1        2O1d0         2O1d+1    
+    8    2O1d+2        2O2d-2        2O2d-1        2O2d0         2O2d+1        2O2d+2        2O3d-2        2O3d-1        2O3d0         2O3d+1    
+    9    2O3d+2        2O1f-3        2O1f-2        2O1f-1        2O1f0         2O1f+1        2O1f+2        2O1f+3        2O2f-3        2O2f-2    
+   10    2O2f-1        2O2f0         2O2f+1        2O2f+2        2O2f+3        2O1g-4        2O1g-3        2O1g-2        2O1g-1        2O1g0     
+   11    2O1g+1        2O1g+2        2O1g+3        2O1g+4    
+ 
+ Maximum number of basis functions per shell:   15
+ Total number of basis functions:    114
+ 
+ 
+ Fitting basis set for the SCF calculation:
+ 
+    1  O  def2-qzvpp-ri-jk [ 14s 10p 6d 2f 1g | 10s 8p 4d 2f 1g ]
+    2  O  def2-qzvpp-ri-jk [ 14s 10p 6d 2f 1g | 10s 8p 4d 2f 1g ]
+ 
+ Basis functions:
+            1             2             3             4             5             6             7             8             9            10
+    0    1O1s          1O2s          1O3s          1O4s          1O5s          1O6s          1O7s          1O8s          1O9s          1O10s     
+    1    1O1pz         1O1py         1O1px         1O2pz         1O2py         1O2px         1O3pz         1O3py         1O3px         1O4pz     
+    2    1O4py         1O4px         1O5pz         1O5py         1O5px         1O6pz         1O6py         1O6px         1O7pz         1O7py     
+    3    1O7px         1O8pz         1O8py         1O8px         1O1d-2        1O1d-1        1O1d0         1O1d+1        1O1d+2        1O2d-2    
+    4    1O2d-1        1O2d0         1O2d+1        1O2d+2        1O3d-2        1O3d-1        1O3d0         1O3d+1        1O3d+2        1O4d-2    
+    5    1O4d-1        1O4d0         1O4d+1        1O4d+2        1O1f-3        1O1f-2        1O1f-1        1O1f0         1O1f+1        1O1f+2    
+    6    1O1f+3        1O2f-3        1O2f-2        1O2f-1        1O2f0         1O2f+1        1O2f+2        1O2f+3        1O1g-4        1O1g-3    
+    7    1O1g-2        1O1g-1        1O1g0         1O1g+1        1O1g+2        1O1g+3        1O1g+4        2O1s          2O2s          2O3s      
+    8    2O4s          2O5s          2O6s          2O7s          2O8s          2O9s          2O10s         2O1pz         2O1py         2O1px     
+    9    2O2pz         2O2py         2O2px         2O3pz         2O3py         2O3px         2O4pz         2O4py         2O4px         2O5pz     
+   10    2O5py         2O5px         2O6pz         2O6py         2O6px         2O7pz         2O7py         2O7px         2O8pz         2O8py     
+   11    2O8px         2O1d-2        2O1d-1        2O1d0         2O1d+1        2O1d+2        2O2d-2        2O2d-1        2O2d0         2O2d+1    
+   12    2O2d+2        2O3d-2        2O3d-1        2O3d0         2O3d+1        2O3d+2        2O4d-2        2O4d-1        2O4d0         2O4d+1    
+   13    2O4d+2        2O1f-3        2O1f-2        2O1f-1        2O1f0         2O1f+1        2O1f+2        2O1f+3        2O2f-3        2O2f-2    
+   14    2O2f-1        2O2f0         2O2f+1        2O2f+2        2O2f+3        2O1g-4        2O1g-3        2O1g-2        2O1g-1        2O1g0     
+   15    2O1g+1        2O1g+2        2O1g+3        2O1g+4    
+ 
+ Maximum number of basis functions per shell:   24
+ Total number of basis functions:    154
+ 
+ 
+ Fitting basis set for the correlation calculation:
+ 
+    1  O  def2-qzvpp-ri [ 9s 8p 7d 5f 3g 1h | 9s 8p 7d 5f 3g 1h ]
+    2  O  def2-qzvpp-ri [ 9s 8p 7d 5f 3g 1h | 9s 8p 7d 5f 3g 1h ]
+ 
+ Basis functions:
+            1             2             3             4             5             6             7             8             9            10
+    0    1O1s          1O2s          1O3s          1O4s          1O5s          1O6s          1O7s          1O8s          1O9s          1O1pz     
+    1    1O1py         1O1px         1O2pz         1O2py         1O2px         1O3pz         1O3py         1O3px         1O4pz         1O4py     
+    2    1O4px         1O5pz         1O5py         1O5px         1O6pz         1O6py         1O6px         1O7pz         1O7py         1O7px     
+    3    1O8pz         1O8py         1O8px         1O1d-2        1O1d-1        1O1d0         1O1d+1        1O1d+2        1O2d-2        1O2d-1    
+    4    1O2d0         1O2d+1        1O2d+2        1O3d-2        1O3d-1        1O3d0         1O3d+1        1O3d+2        1O4d-2        1O4d-1    
+    5    1O4d0         1O4d+1        1O4d+2        1O5d-2        1O5d-1        1O5d0         1O5d+1        1O5d+2        1O6d-2        1O6d-1    
+    6    1O6d0         1O6d+1        1O6d+2        1O7d-2        1O7d-1        1O7d0         1O7d+1        1O7d+2        1O1f-3        1O1f-2    
+    7    1O1f-1        1O1f0         1O1f+1        1O1f+2        1O1f+3        1O2f-3        1O2f-2        1O2f-1        1O2f0         1O2f+1    
+    8    1O2f+2        1O2f+3        1O3f-3        1O3f-2        1O3f-1        1O3f0         1O3f+1        1O3f+2        1O3f+3        1O4f-3    
+    9    1O4f-2        1O4f-1        1O4f0         1O4f+1        1O4f+2        1O4f+3        1O5f-3        1O5f-2        1O5f-1        1O5f0     
+   10    1O5f+1        1O5f+2        1O5f+3        1O1g-4        1O1g-3        1O1g-2        1O1g-1        1O1g0         1O1g+1        1O1g+2    
+   11    1O1g+3        1O1g+4        1O2g-4        1O2g-3        1O2g-2        1O2g-1        1O2g0         1O2g+1        1O2g+2        1O2g+3    
+   12    1O2g+4        1O3g-4        1O3g-3        1O3g-2        1O3g-1        1O3g0         1O3g+1        1O3g+2        1O3g+3        1O3g+4    
+   13    1O1h-5        1O1h-4        1O1h-3        1O1h-2        1O1h-1        1O1h0         1O1h+1        1O1h+2        1O1h+3        1O1h+4    
+   14    1O1h+5        2O1s          2O2s          2O3s          2O4s          2O5s          2O6s          2O7s          2O8s          2O9s      
+   15    2O1pz         2O1py         2O1px         2O2pz         2O2py         2O2px         2O3pz         2O3py         2O3px         2O4pz     
+   16    2O4py         2O4px         2O5pz         2O5py         2O5px         2O6pz         2O6py         2O6px         2O7pz         2O7py     
+   17    2O7px         2O8pz         2O8py         2O8px         2O1d-2        2O1d-1        2O1d0         2O1d+1        2O1d+2        2O2d-2    
+   18    2O2d-1        2O2d0         2O2d+1        2O2d+2        2O3d-2        2O3d-1        2O3d0         2O3d+1        2O3d+2        2O4d-2    
+   19    2O4d-1        2O4d0         2O4d+1        2O4d+2        2O5d-2        2O5d-1        2O5d0         2O5d+1        2O5d+2        2O6d-2    
+   20    2O6d-1        2O6d0         2O6d+1        2O6d+2        2O7d-2        2O7d-1        2O7d0         2O7d+1        2O7d+2        2O1f-3    
+   21    2O1f-2        2O1f-1        2O1f0         2O1f+1        2O1f+2        2O1f+3        2O2f-3        2O2f-2        2O2f-1        2O2f0     
+   22    2O2f+1        2O2f+2        2O2f+3        2O3f-3        2O3f-2        2O3f-1        2O3f0         2O3f+1        2O3f+2        2O3f+3    
+   23    2O4f-3        2O4f-2        2O4f-1        2O4f0         2O4f+1        2O4f+2        2O4f+3        2O5f-3        2O5f-2        2O5f-1    
+   24    2O5f0         2O5f+1        2O5f+2        2O5f+3        2O1g-4        2O1g-3        2O1g-2        2O1g-1        2O1g0         2O1g+1    
+   25    2O1g+2        2O1g+3        2O1g+4        2O2g-4        2O2g-3        2O2g-2        2O2g-1        2O2g0         2O2g+1        2O2g+2    
+   26    2O2g+3        2O2g+4        2O3g-4        2O3g-3        2O3g-2        2O3g-1        2O3g0         2O3g+1        2O3g+2        2O3g+3    
+   27    2O3g+4        2O1h-5        2O1h-4        2O1h-3        2O1h-2        2O1h-1        2O1h0         2O1h+1        2O1h+2        2O1h+3    
+   28    2O1h+4        2O1h+5    
+ 
+ Maximum number of basis functions per shell:   35
+ Total number of basis functions:    282
+ 
+ 
+ Old basis set for SCF restart
+ 
+    1  O  def2-svp [ 7s 4p 1d | 3s 2p 1d ]
+    2  O  def2-svp [ 7s 4p 1d | 3s 2p 1d ]
+ 
+ Basis functions:
+            1             2             3             4             5             6             7             8             9            10
+    0    1O1s          1O2s          1O3s          1O1pz         1O1py         1O1px         1O2pz         1O2py         1O2px         1O1d-2    
+    1    1O1d-1        1O1d0         1O1d+1        1O1d+2        2O1s          2O2s          2O3s          2O1pz         2O1py         2O1px     
+    2    2O2pz         2O2py         2O2px         2O1d-2        2O1d-1        2O1d0         2O1d+1        2O1d+2    
+ 
+ Maximum number of basis functions per shell:   35
+ Total number of basis functions:     28
+ 
+ 
+ Generating atomic densities for the SCF calculation...
+ CPU time [min]:     0.094                   Wall time [min]:     0.020
+ 
+ Character table for point group C1:
+ 
+          E  
+    A     1
+ 
+ Number of basis functions per irrep:
+    A     114
+ 
+ 
+ Density functional: DSDPBEP86
+ Constructing integration grid for DFT...
+ Angular integration grid: adaptive 590-point Lebedev quadrature
+ Radial integration grid: Log3 quadrature
+ Total number of grid points: 26868       
+ CPU time [min]:     1.092                   Wall time [min]:     0.051
+ 
+ Calculation of overlap integrals...
+ CPU time [min]:     1.095                   Wall time [min]:     0.051
+ 
+ Calculation of the square root of the overlap matrix...
+ Minimum eigenvalue of the overlap matrix: 0.549185E-03
+ CPU time [min]:     1.108                   Wall time [min]:     0.051
+ 
+ Calculation of kinetic energy integrals...
+ CPU time [min]:     1.108                   Wall time [min]:     0.051
+ Calculation of nuclear attraction integrals...
+ CPU time [min]:     1.108                   Wall time [min]:     0.051
+ Calculation of overlap integrals...
+ CPU time [min]:     1.109                   Wall time [min]:     0.051
+ 
+ Calculation of prescreening integrals...
+ CPU time [min]:     1.206                   Wall time [min]:     0.053
+ 
+ Calculation of two-center Coulomb integrals...
+   5% done.
+  20% done.
+  32% done.
+  52% done.
+  72% done.
+  89% done.
+ 100% done.
+ CPU time [min]:     1.214                   Wall time [min]:     0.054
+ 
+ Calculation of inverse square root of the two-center integral matrix...
+ CPU time [min]:     1.222                   Wall time [min]:     0.054
+ 
+ Calculation of three-center Coulomb integrals...
+   3% done.
+  18% done.
+  32% done.
+  45% done.
+  64% done.
+  85% done.
+ 100% done.
+ CPU time [min]:     1.249                   Wall time [min]:     0.055
+
+ ************************ 2021-11-29 13:58:54 *************************
+ Executing scf...
+
+ @scfsetup: integrals taken from disk
+            mrcc/integ binary format
+ @scfsetup: calculating on full matrices
+            not using symmetry adapted basis
+ @scfsetup: diis switched on
+ @scfsetup: number of steps to extrapolate from  10
+ @scfsetup: tolerance in energy deviation    0.100000E-05
+            tolerance in density deviation    0.100000E-06
+ @scfsetup: maximum number of iterations:1000
+ @scfsetup: unrestricted hf calc
+ @scfsetup: restarting scf from SCFDENSITIES file
+ @scfsetup: occupation set:
+            from initial orbitals
+ @scfsetup: diis runs from iteration:   1
+ @scfsetup: diis runs to iteration:1000
+ @scfsetup: diis runs in every iteration
+ Allocation of 170.0 Gbytes of memory...
+ ======================================================================
+ ITERATION STEP   1
+ CPU time [min]:     0.023                   Wall time [min]:     0.003
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     0.038                   Wall time [min]:     0.003
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.449354543566
+                   0.4300*P86 [au]:     -0.112170665893
+ Exchange-correlation energy  [au]:     -2.561525209459
+ CPU time [min]:     0.301                   Wall time [min]:     0.010
+ 
+ Coulomb energy + HF exchange [au]:     30.924338524144
+ Gradient norm:      5.5387E+00
+ RMS of alpha difference density:                      0.00068136791059
+ RMS of beta  difference density:                      0.00047888846109
+ Gap [au]:  0.44719304
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   1 IS            -74.8563779854089972 [AU]
+ ======================================================================
+ ITERATION STEP   2
+ CPU time [min]:     0.317                   Wall time [min]:     0.011
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     0.332                   Wall time [min]:     0.011
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.450236139999
+                   0.4300*P86 [au]:     -0.111738184497
+ Exchange-correlation energy  [au]:     -2.561974324496
+ CPU time [min]:     0.529                   Wall time [min]:     0.016
+ 
+ Coulomb energy + HF exchange [au]:     30.924022302393
+ Gradient norm:      5.6477E-02
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.01957051315853
+ RMS of alpha difference density:                      0.00161367419175
+ RMS of beta  difference density:                      0.00122417132867
+ Gap [au]:  0.44593944
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   2 IS            -74.8871288379398976 [AU]
+ ======================================================================
+ ITERATION STEP   3
+ CPU time [min]:     0.539                   Wall time [min]:     0.017
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     0.554                   Wall time [min]:     0.017
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.450241899188
+                   0.4300*P86 [au]:     -0.111580763848
+ Exchange-correlation energy  [au]:     -2.561822663036
+ CPU time [min]:     0.698                   Wall time [min]:     0.021
+ 
+ Coulomb energy + HF exchange [au]:     30.908377069999
+ Gradient norm:      1.0298E-02
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00013013277834
+ RMS of alpha difference density:                      0.00003804343708
+ RMS of beta  difference density:                      0.00003884598800
+ Gap [au]:  0.44713235
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   3 IS            -74.9168822786147501 [AU]
+ ======================================================================
+ ITERATION STEP   4
+ CPU time [min]:     0.709                   Wall time [min]:     0.021
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     0.724                   Wall time [min]:     0.021
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.448486710408
+                   0.4300*P86 [au]:     -0.111535903824
+ Exchange-correlation energy  [au]:     -2.560022614233
+ CPU time [min]:     0.870                   Wall time [min]:     0.025
+ 
+ Coulomb energy + HF exchange [au]:     30.869947469630
+ Gradient norm:      4.0683E-03
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00004531214872
+ RMS of alpha difference density:                      0.00001214761487
+ RMS of beta  difference density:                      0.00000804170397
+ Gap [au]:  0.44722077
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   4 IS            -74.9169084584804068 [AU]
+ ======================================================================
+ ITERATION STEP   5
+ CPU time [min]:     0.881                   Wall time [min]:     0.025
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     0.896                   Wall time [min]:     0.026
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.449167845674
+                   0.4300*P86 [au]:     -0.111545510921
+ Exchange-correlation energy  [au]:     -2.560713356595
+ CPU time [min]:     1.039                   Wall time [min]:     0.029
+ 
+ Coulomb energy + HF exchange [au]:     30.883454193416
+ Gradient norm:      1.2675E-03
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000828276313
+ RMS of alpha difference density:                      0.00000134017172
+ RMS of beta  difference density:                      0.00000418145385
+ Gap [au]:  0.44698246
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   5 IS            -74.9169124374109430 [AU]
+ ======================================================================
+ ITERATION STEP   6
+ CPU time [min]:     1.049                   Wall time [min]:     0.029
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     1.064                   Wall time [min]:     0.030
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.449081434226
+                   0.4300*P86 [au]:     -0.111541731940
+ Exchange-correlation energy  [au]:     -2.560623166165
+ CPU time [min]:     1.207                   Wall time [min]:     0.033
+ 
+ Coulomb energy + HF exchange [au]:     30.881463107359
+ Gradient norm:      3.2563E-04
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000257554549
+ RMS of alpha difference density:                      0.00000134502714
+ RMS of beta  difference density:                      0.00000211778048
+ Gap [au]:  0.44686530
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   6 IS            -74.9169127433102489 [AU]
+ ======================================================================
+ ITERATION STEP   7
+ CPU time [min]:     1.216                   Wall time [min]:     0.034
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     1.231                   Wall time [min]:     0.034
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.449091255812
+                   0.4300*P86 [au]:     -0.111540450080
+ Exchange-correlation energy  [au]:     -2.560631705893
+ CPU time [min]:     1.377                   Wall time [min]:     0.038
+ 
+ Coulomb energy + HF exchange [au]:     30.881538128980
+ Gradient norm:      6.3859E-05
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000058040831
+ RMS of alpha difference density:                      0.00000029497336
+ RMS of beta  difference density:                      0.00000041109730
+ Gap [au]:  0.44684053
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   7 IS            -74.9169128014256245 [AU]
+ ======================================================================
+ ITERATION STEP   8
+ CPU time [min]:     1.387                   Wall time [min]:     0.038
+ 
+ Constructing alpha Fock-matrix...
+ Number of integral batches:    1
+ Occupied indices per batch:    5
+ CPU time [min]:     1.402                   Wall time [min]:     0.038
+ 
+ Calculating the exchange-correlation matrix...
+                  0.3000*PBEX [au]:     -2.449091960480
+                   0.4300*P86 [au]:     -0.111540196618
+ Exchange-correlation energy  [au]:     -2.560632157098
+ CPU time [min]:     1.541                   Wall time [min]:     0.042
+ 
+ Coulomb energy + HF exchange [au]:     30.881535452303
+ Gradient norm:      1.1584E-05
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000008979301
+ RMS of alpha difference density:                      0.00000003648391
+ RMS of beta  difference density:                      0.00000005610579
+ Gap [au]:  0.44683944
+ ALPHA OCC:   5
+ BETA  OCC:   3
+ 
+ ***KOHN-SHAM ENERGY IN STEP   8 IS            -74.9169128036703995 [AU]
+ ======================================================================
+ 
+ SUCCESS...
+ THE SCF ITERATION HAS CONVERGED!
+ 
+                   A   
+ FINAL ALPHA OCC:   5
+ FINAL BETA  OCC:   3
+ 
+ ***FINAL KOHN-SHAM ENERGY:           -74.9169128036703995 [AU]
+ 
+ Expectation value of S^2:  2.0064
+ Average multiplicity:      3.0043
+ 
+ Orbital energies [au]:
+      Irrep         Alpha          Beta
+    1   A        -20.169820     -20.102027
+    2   A         -1.271649      -0.999573
+    3   A         -0.619183      -0.455546
+ 
+    4   A         -0.619182      -0.008707
+    5   A         -0.527534      -0.007421
+ 
+    6   A          0.203021       0.232605
+    7   A          0.268228       0.286740
+    8   A          0.279986       0.306529
+    9   A          0.286115       0.318423
+   10   A          0.359577       0.378992
+   11   A          0.371691       0.406606
+   12   A          0.429997       0.476968
+   13   A          0.674636       0.711168
+   14   A          0.990471       1.028629
+   15   A          1.006981       1.036798
+   16   A          1.063785       1.076834
+   17   A          1.065270       1.107748
+   18   A          1.067491       1.109695
+   19   A          1.231621       1.288181
+   20   A          1.298510       1.359845
+   21   A          1.325504       1.371324
+   22   A          1.400571       1.498067
+   23   A          1.475717       1.531138
+   24   A          1.515207       1.532221
+   25   A          1.515490       1.542742
+   26   A          1.519452       1.581051
+   27   A          1.913681       1.963674
+   28   A          1.938122       1.965899
+   29   A          1.955836       1.967741
+   30   A          2.186864       2.217718
+   31   A          3.008972       3.068223
+   32   A          3.044535       3.081668
+   33   A          3.057328       3.082427
+   34   A          3.121326       3.181578
+   35   A          3.175301       3.213238
+   36   A          3.175345       3.213969
+   37   A          3.210379       3.257316
+   38   A          3.211829       3.259277
+   39   A          3.621912       3.717129
+   40   A          3.658712       3.726321
+   41   A          3.745948       3.759852
+   42   A          3.745957       3.760116
+   43   A          3.893628       3.992452
+   44   A          3.896792       3.998262
+   45   A          4.060245       4.122862
+   46   A          4.183209       4.288559
+   47   A          4.228462       4.290562
+   48   A          4.252392       4.329572
+   49   A          4.394425       4.419174
+   50   A          4.394703       4.420536
+   51   A          4.582001       4.663135
+   52   A          4.837398       4.900189
+   53   A          4.877422       4.909855
+   54   A          5.203161       5.215267
+   55   A          5.203265       5.215584
+   56   A          5.216188       5.270765
+   57   A          5.248467       5.283341
+   58   A          5.285724       5.367419
+   59   A          5.369355       5.386652
+   60   A          5.960563       6.027470
+   61   A          5.993114       6.030527
+   62   A          7.575859       7.649273
+   63   A          8.858381       8.905526
+   64   A          8.858663       8.908377
+   65   A          8.943689       8.989000
+   66   A          8.943705       8.990369
+   67   A          9.091548       9.130143
+   68   A          9.091550       9.130956
+   69   A          9.396540       9.469517
+   70   A          9.435773       9.479495
+   71   A          9.518991       9.586225
+   72   A         10.051812      10.061147
+   73   A         10.051813      10.061183
+   74   A         10.278189      10.298281
+   75   A         10.278191      10.298663
+   76   A         10.947591      10.992399
+   77   A         11.192661      11.268978
+   78   A         11.203764      11.269468
+   79   A         11.210369      11.272327
+   80   A         11.210781      11.273850
+   81   A         11.213375      11.287300
+   82   A         11.242537      11.291742
+   83   A         11.479338      11.523236
+   84   A         11.528622      11.586478
+   85   A         11.529678      11.591401
+   86   A         11.899249      11.976735
+   87   A         11.986880      12.106180
+   88   A         12.042303      12.106659
+   89   A         12.286092      12.359541
+   90   A         12.286697      12.366903
+   91   A         12.641709      12.701027
+   92   A         12.666291      12.701328
+   93   A         12.731843      12.821632
+   94   A         13.454031      13.464596
+   95   A         13.454034      13.464650
+   96   A         13.646900      13.661195
+   97   A         13.646938      13.661404
+   98   A         13.872827      13.943811
+   99   A         13.979152      14.019620
+  100   A         13.997468      14.019776
+  101   A         14.164059      14.195571
+  102   A         14.174507      14.198336
+  103   A         14.690366      14.705051
+  104   A         15.867303      15.909571
+  105   A         16.808471      16.820033
+  106   A         16.808504      16.820162
+  107   A         17.636450      17.659815
+  108   A         17.644108      17.662113
+  109   A         19.926927      19.963689
+  110   A         30.970454      30.983662
+  111   A         48.242855      48.285192
+  112   A         89.688678      89.700598
+  113   A        254.545919     254.555836
+  114   A        410.004764     410.016089
+ 
+ RETURNING FROM SCF ALGORITHM
+ ======================================================================
+
+ ************************ 2021-11-29 13:58:56 *************************
+ Executing integ...
+
+ Allocation of 170.0 Gbytes of memory...
+ 
+ 
+ Basis set information:
+ 
+ Maximum angular momentum: h
+ Maximum number of contracted Gaussians:   10
+ Maximum number of primitive Gaussians:    15
+ Spherical harmonic GTOs are used.
+ 
+ 
+ Conventional basis set:
+ 
+    1  O  def2-qzvpp [ 15s 8p 3d 2f 1g | 7s 4p 3d 2f 1g ]
+    2  O  def2-qzvpp [ 15s 8p 3d 2f 1g | 7s 4p 3d 2f 1g ]
+ 
+ Basis functions:
+            1             2             3             4             5             6             7             8             9            10
+    0    1O1s          1O2s          1O3s          1O4s          1O5s          1O6s          1O7s          1O1pz         1O1py         1O1px     
+    1    1O2pz         1O2py         1O2px         1O3pz         1O3py         1O3px         1O4pz         1O4py         1O4px         1O1d-2    
+    2    1O1d-1        1O1d0         1O1d+1        1O1d+2        1O2d-2        1O2d-1        1O2d0         1O2d+1        1O2d+2        1O3d-2    
+    3    1O3d-1        1O3d0         1O3d+1        1O3d+2        1O1f-3        1O1f-2        1O1f-1        1O1f0         1O1f+1        1O1f+2    
+    4    1O1f+3        1O2f-3        1O2f-2        1O2f-1        1O2f0         1O2f+1        1O2f+2        1O2f+3        1O1g-4        1O1g-3    
+    5    1O1g-2        1O1g-1        1O1g0         1O1g+1        1O1g+2        1O1g+3        1O1g+4        2O1s          2O2s          2O3s      
+    6    2O4s          2O5s          2O6s          2O7s          2O1pz         2O1py         2O1px         2O2pz         2O2py         2O2px     
+    7    2O3pz         2O3py         2O3px         2O4pz         2O4py         2O4px         2O1d-2        2O1d-1        2O1d0         2O1d+1    
+    8    2O1d+2        2O2d-2        2O2d-1        2O2d0         2O2d+1        2O2d+2        2O3d-2        2O3d-1        2O3d0         2O3d+1    
+    9    2O3d+2        2O1f-3        2O1f-2        2O1f-1        2O1f0         2O1f+1        2O1f+2        2O1f+3        2O2f-3        2O2f-2    
+   10    2O2f-1        2O2f0         2O2f+1        2O2f+2        2O2f+3        2O1g-4        2O1g-3        2O1g-2        2O1g-1        2O1g0     
+   11    2O1g+1        2O1g+2        2O1g+3        2O1g+4    
+ 
+ Maximum number of basis functions per shell:   15
+ Total number of basis functions:    114
+ 
+ 
+ Fitting basis set for the SCF calculation:
+ 
+    1  O  def2-qzvpp-ri-jk [ 14s 10p 6d 2f 1g | 10s 8p 4d 2f 1g ]
+    2  O  def2-qzvpp-ri-jk [ 14s 10p 6d 2f 1g | 10s 8p 4d 2f 1g ]
+ 
+ Basis functions:
+            1             2             3             4             5             6             7             8             9            10
+    0    1O1s          1O2s          1O3s          1O4s          1O5s          1O6s          1O7s          1O8s          1O9s          1O10s     
+    1    1O1pz         1O1py         1O1px         1O2pz         1O2py         1O2px         1O3pz         1O3py         1O3px         1O4pz     
+    2    1O4py         1O4px         1O5pz         1O5py         1O5px         1O6pz         1O6py         1O6px         1O7pz         1O7py     
+    3    1O7px         1O8pz         1O8py         1O8px         1O1d-2        1O1d-1        1O1d0         1O1d+1        1O1d+2        1O2d-2    
+    4    1O2d-1        1O2d0         1O2d+1        1O2d+2        1O3d-2        1O3d-1        1O3d0         1O3d+1        1O3d+2        1O4d-2    
+    5    1O4d-1        1O4d0         1O4d+1        1O4d+2        1O1f-3        1O1f-2        1O1f-1        1O1f0         1O1f+1        1O1f+2    
+    6    1O1f+3        1O2f-3        1O2f-2        1O2f-1        1O2f0         1O2f+1        1O2f+2        1O2f+3        1O1g-4        1O1g-3    
+    7    1O1g-2        1O1g-1        1O1g0         1O1g+1        1O1g+2        1O1g+3        1O1g+4        2O1s          2O2s          2O3s      
+    8    2O4s          2O5s          2O6s          2O7s          2O8s          2O9s          2O10s         2O1pz         2O1py         2O1px     
+    9    2O2pz         2O2py         2O2px         2O3pz         2O3py         2O3px         2O4pz         2O4py         2O4px         2O5pz     
+   10    2O5py         2O5px         2O6pz         2O6py         2O6px         2O7pz         2O7py         2O7px         2O8pz         2O8py     
+   11    2O8px         2O1d-2        2O1d-1        2O1d0         2O1d+1        2O1d+2        2O2d-2        2O2d-1        2O2d0         2O2d+1    
+   12    2O2d+2        2O3d-2        2O3d-1        2O3d0         2O3d+1        2O3d+2        2O4d-2        2O4d-1        2O4d0         2O4d+1    
+   13    2O4d+2        2O1f-3        2O1f-2        2O1f-1        2O1f0         2O1f+1        2O1f+2        2O1f+3        2O2f-3        2O2f-2    
+   14    2O2f-1        2O2f0         2O2f+1        2O2f+2        2O2f+3        2O1g-4        2O1g-3        2O1g-2        2O1g-1        2O1g0     
+   15    2O1g+1        2O1g+2        2O1g+3        2O1g+4    
+ 
+ Maximum number of basis functions per shell:   24
+ Total number of basis functions:    154
+ 
+ 
+ Fitting basis set for the correlation calculation:
+ 
+    1  O  def2-qzvpp-ri [ 9s 8p 7d 5f 3g 1h | 9s 8p 7d 5f 3g 1h ]
+    2  O  def2-qzvpp-ri [ 9s 8p 7d 5f 3g 1h | 9s 8p 7d 5f 3g 1h ]
+ 
+ Basis functions:
+            1             2             3             4             5             6             7             8             9            10
+    0    1O1s          1O2s          1O3s          1O4s          1O5s          1O6s          1O7s          1O8s          1O9s          1O1pz     
+    1    1O1py         1O1px         1O2pz         1O2py         1O2px         1O3pz         1O3py         1O3px         1O4pz         1O4py     
+    2    1O4px         1O5pz         1O5py         1O5px         1O6pz         1O6py         1O6px         1O7pz         1O7py         1O7px     
+    3    1O8pz         1O8py         1O8px         1O1d-2        1O1d-1        1O1d0         1O1d+1        1O1d+2        1O2d-2        1O2d-1    
+    4    1O2d0         1O2d+1        1O2d+2        1O3d-2        1O3d-1        1O3d0         1O3d+1        1O3d+2        1O4d-2        1O4d-1    
+    5    1O4d0         1O4d+1        1O4d+2        1O5d-2        1O5d-1        1O5d0         1O5d+1        1O5d+2        1O6d-2        1O6d-1    
+    6    1O6d0         1O6d+1        1O6d+2        1O7d-2        1O7d-1        1O7d0         1O7d+1        1O7d+2        1O1f-3        1O1f-2    
+    7    1O1f-1        1O1f0         1O1f+1        1O1f+2        1O1f+3        1O2f-3        1O2f-2        1O2f-1        1O2f0         1O2f+1    
+    8    1O2f+2        1O2f+3        1O3f-3        1O3f-2        1O3f-1        1O3f0         1O3f+1        1O3f+2        1O3f+3        1O4f-3    
+    9    1O4f-2        1O4f-1        1O4f0         1O4f+1        1O4f+2        1O4f+3        1O5f-3        1O5f-2        1O5f-1        1O5f0     
+   10    1O5f+1        1O5f+2        1O5f+3        1O1g-4        1O1g-3        1O1g-2        1O1g-1        1O1g0         1O1g+1        1O1g+2    
+   11    1O1g+3        1O1g+4        1O2g-4        1O2g-3        1O2g-2        1O2g-1        1O2g0         1O2g+1        1O2g+2        1O2g+3    
+   12    1O2g+4        1O3g-4        1O3g-3        1O3g-2        1O3g-1        1O3g0         1O3g+1        1O3g+2        1O3g+3        1O3g+4    
+   13    1O1h-5        1O1h-4        1O1h-3        1O1h-2        1O1h-1        1O1h0         1O1h+1        1O1h+2        1O1h+3        1O1h+4    
+   14    1O1h+5        2O1s          2O2s          2O3s          2O4s          2O5s          2O6s          2O7s          2O8s          2O9s      
+   15    2O1pz         2O1py         2O1px         2O2pz         2O2py         2O2px         2O3pz         2O3py         2O3px         2O4pz     
+   16    2O4py         2O4px         2O5pz         2O5py         2O5px         2O6pz         2O6py         2O6px         2O7pz         2O7py     
+   17    2O7px         2O8pz         2O8py         2O8px         2O1d-2        2O1d-1        2O1d0         2O1d+1        2O1d+2        2O2d-2    
+   18    2O2d-1        2O2d0         2O2d+1        2O2d+2        2O3d-2        2O3d-1        2O3d0         2O3d+1        2O3d+2        2O4d-2    
+   19    2O4d-1        2O4d0         2O4d+1        2O4d+2        2O5d-2        2O5d-1        2O5d0         2O5d+1        2O5d+2        2O6d-2    
+   20    2O6d-1        2O6d0         2O6d+1        2O6d+2        2O7d-2        2O7d-1        2O7d0         2O7d+1        2O7d+2        2O1f-3    
+   21    2O1f-2        2O1f-1        2O1f0         2O1f+1        2O1f+2        2O1f+3        2O2f-3        2O2f-2        2O2f-1        2O2f0     
+   22    2O2f+1        2O2f+2        2O2f+3        2O3f-3        2O3f-2        2O3f-1        2O3f0         2O3f+1        2O3f+2        2O3f+3    
+   23    2O4f-3        2O4f-2        2O4f-1        2O4f0         2O4f+1        2O4f+2        2O4f+3        2O5f-3        2O5f-2        2O5f-1    
+   24    2O5f0         2O5f+1        2O5f+2        2O5f+3        2O1g-4        2O1g-3        2O1g-2        2O1g-1        2O1g0         2O1g+1    
+   25    2O1g+2        2O1g+3        2O1g+4        2O2g-4        2O2g-3        2O2g-2        2O2g-1        2O2g0         2O2g+1        2O2g+2    
+   26    2O2g+3        2O2g+4        2O3g-4        2O3g-3        2O3g-2        2O3g-1        2O3g0         2O3g+1        2O3g+2        2O3g+3    
+   27    2O3g+4        2O1h-5        2O1h-4        2O1h-3        2O1h-2        2O1h-1        2O1h0         2O1h+1        2O1h+2        2O1h+3    
+   28    2O1h+4        2O1h+5    
+ 
+ Maximum number of basis functions per shell:   35
+ Total number of basis functions:    282
+ 
+ 
+ Old basis set for SCF restart
+ 
+    1  O  def2-svp [ 7s 4p 1d | 3s 2p 1d ]
+    2  O  def2-svp [ 7s 4p 1d | 3s 2p 1d ]
+ 
+ Basis functions:
+            1             2             3             4             5             6             7             8             9            10
+    0    1O1s          1O2s          1O3s          1O1pz         1O1py         1O1px         1O2pz         1O2py         1O2px         1O1d-2    
+    1    1O1d-1        1O1d0         1O1d+1        1O1d+2        2O1s          2O2s          2O3s          2O1pz         2O1py         2O1px     
+    2    2O2pz         2O2py         2O2px         2O1d-2        2O1d-1        2O1d0         2O1d+1        2O1d+2    
+ 
+ Maximum number of basis functions per shell:   35
+ Total number of basis functions:     28
+ 
+ 
+ Calculation of prescreening integrals...
+ CPU time [min]:     0.060                   Wall time [min]:     0.005
+ 
+ Calculation of two-center Coulomb integrals...
+   1% done.
+  13% done.
+  25% done.
+  38% done.
+  55% done.
+  75% done.
+  92% done.
+ 100% done.
+ CPU time [min]:     0.067                   Wall time [min]:     0.005
+ 
+ Cholesky decomposition of the inverse of the two-center matrix...
+ CPU time [min]:     0.077                   Wall time [min]:     0.006
+ 
+ Calculation of three-center Coulomb integrals...
+   3% done.
+  18% done.
+  32% done.
+  45% done.
+  64% done.
+  85% done.
+ 100% done.
+ CPU time [min]:     0.108                   Wall time [min]:     0.007
+
+ ************************ 2021-11-29 13:58:57 *************************
+ Executing drpa...
+
+ Three-index integral transformation and DF-MP2 calculation
+ 
+ Allocation of 170.0 Gbytes of memory...
+ 
+ Alpha-alpha contribution
+ Number of integral batches:    1
+ Occupied indices per batch:    4
+ 
+ Transforming integrals of batch 1...
+ CPU time [min]:     0.072                   Wall time [min]:     0.003
+ 
+ Beta-beta and alpha-beta contribution
+ Number of integral batches:    1
+ Occupied indices per batch:    2
+ 
+ Transforming integrals of batch 1...
+ CPU time [min]:     0.123                   Wall time [min]:     0.005
+ 
+ Reference energy [au]:                       -74.916912803670
+ SCS-MP2 contribution [au]:                    -0.079779407159
+ DSDPBEP86 energy (without D3) [au]:          -74.996692210830
+ 
+ ************************ 2021-11-29 13:58:57 *************************
+                      Normal termination of mrcc.
+ **********************************************************************

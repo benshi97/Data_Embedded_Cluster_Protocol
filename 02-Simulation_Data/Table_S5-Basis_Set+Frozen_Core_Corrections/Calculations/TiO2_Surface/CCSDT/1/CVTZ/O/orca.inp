@@ -1,0 +1,31 @@
+! VeryTightSCF DLPNO-CCSD(T) NormalPNO RIJCOSX SlowConv DIIS NOTRAH
+%maxcore 4000
+%pal
+  nprocs 4
+end
+%method
+  Method HF
+  RI on
+  RunTyp Energy
+end
+%basis
+  Basis "aug-cc-pVTZ"
+  Aux "AutoAux"
+  AuxC "AutoAux"
+end
+%scf
+  HFTyp uhf
+  Guess Hueckel
+  AutoStart True
+  SCFMode Direct
+  MaxIter 1000
+  sthresh 1e-6
+end
+%coords
+  CTyp xyz
+  Mult 3
+  Units angs
+  coords
+O                      0.00000000000    0.00000000000    0.00000000000
+  end
+end

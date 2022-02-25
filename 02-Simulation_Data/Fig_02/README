@@ -1,0 +1,17 @@
+This folder contains the .xyz files of the structures visualized in Fig. 02 (a) and (b) as well as the input and output files for the points in Fig. 02 (c)
+
+The folders and files are:
+
+Structures:
+			supercell.xyz			- 192 atom supercell used to visualize the first 3 RDF shells in bulk rutile TiO2
+			rdf_01.xyz				- Quantum cluster containing 1 RDF shell for builk rutile TiO2
+            rdf_01.xyz              - Quantum cluster containing 2 RDF shell for builk rutile TiO2
+            rdf_01.xyz              - Quantum cluster containing 3 RDF shell for builk rutile TiO2
+            rdf_01.xyz              - Quantum cluster containing 4 RDF shell for builk rutile TiO2
+            rdf_01.xyz              - Quantum cluster containing 5 RDF shell for builk rutile TiO2
+            rdf_01.xyz              - Quantum cluster containing 6 RDF shell for builk rutile TiO2
+
+Simulations:
+			RDF						- Folder containing the input (MINP) and output (mrcc.out) files for computing the EOv for quantum clusters of increasing size, with subfolders at each given size and further subfolders for the perfect and defect(ed) quantum clusters.
+			Stoic					- Folder containing the input (orca.inp) and output (orca.out) files for computing the EOv for quantum clusters of increasing size, with subfolders at each given size and further subfolders for the perfect and defect(ed) quantum clusters. The six O anion configurations for the 3 Ti ion cluster are also given within the subfolders 3_{1..6}
+			SCC						- MINP and mrcc.out files for the smallest converged cluster containing 18 Ti ions

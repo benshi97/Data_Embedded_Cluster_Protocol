@@ -1,0 +1,8 @@
+This folder contains the .xyz files of the structures visualized in Fig. 01
+
+The files are:
+
+emb_clus.xyz		-	Embedded cluster schematic
+size_{01..03}.xyz	-	Three quantum clusters of increasing size
+shape_{01..03}.xyz	-	Three quantum clusters of different shapes
+charge_{01..03}.xyz	-	Three quantum clusters of in the order (1) positive (2) neutral and (3) negative charge

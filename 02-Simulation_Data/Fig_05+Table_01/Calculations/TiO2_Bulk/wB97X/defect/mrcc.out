@@ -1,0 +1,440 @@
+ @scfsetup: integrals calculated directly
+            mrcc/integ direct run
+ @scfsetup: calculating on full matrices
+            not using symmetry adapted basis
+ @scfsetup: diis switched on
+ @scfsetup: number of steps to extrapolate from  10
+ @scfsetup: tolerance in energy deviation    0.100000E-05
+            tolerance in density deviation    0.100000E-05
+ @scfsetup: maximum number of iterations:1000
+ @scfsetup: restricted closed shell hf calc
+ @scfsetup: restarting scf from SCFDENSITIES file
+ @scfsetup: occupation set:
+            from initial orbitals
+ @scfsetup: diis runs from iteration:   1
+ @scfsetup: diis runs to iteration:1000
+ @scfsetup: diis runs in every iteration
+ Allocation of 490.0 Gbytes of memory...
+ ======================================================================
+ ITERATION STEP   7
+ CPU time [min]:     3.784                   Wall time [min]:     0.126
+ 
+ Constructing Fock-matrix...
+ 
+ First step of Coulomb + first step of exchange...
+ Exchange contribution is evaluated for MOs 1 to 503.
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]:  2819.249                   Wall time [min]:    45.775
+ 
+ Fitting and assembly step of exchange...
+ CPU time [min]:  3677.986                   Wall time [min]:    59.309
+ 
+ Calculation of two-electron integrals (long range)...
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]:  6474.783                   Wall time [min]:   104.527
+ 
+ Fitting and assembly step of exchange...
+ CPU time [min]:  6810.757                   Wall time [min]:   109.881
+ 
+ Second step of Coulomb...
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]:  6860.598                   Wall time [min]:   110.544
+ 
+ Calculating the exchange-correlation matrix...
+      1.0000*HYB_GGA_XC_WB97X [au]:  -1022.858913407221
+ Exchange-correlation energy  [au]:  -1022.858913407221
+ CPU time [min]:  7397.733                   Wall time [min]:   117.823
+ 
+ Coulomb energy + HF exchange [au]:  57992.482684257062
+ Gradient norm:      1.3428E-07
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000000153725
+ RMS of difference density:                            0.00000727758184
+ Gap [au]:  0.21205535
+ ALPHA OCC: 503
+ BETA  OCC: 503
+ 
+ ***KOHN-SHAM ENERGY IN STEP   7 IS         -37385.4059789289312903 [AU]
+ ======================================================================
+ ITERATION STEP   8
+ CPU time [min]:  7402.971                   Wall time [min]:   117.991
+ 
+ Constructing Fock-matrix...
+ 
+ First step of Coulomb + first step of exchange...
+ Exchange contribution is evaluated for MOs 1 to 503.
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 10249.952                   Wall time [min]:   163.800
+ 
+ Fitting and assembly step of exchange...
+ CPU time [min]: 11029.200                   Wall time [min]:   175.119
+ 
+ Calculation of two-electron integrals (long range)...
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 13863.318                   Wall time [min]:   220.709
+ 
+ Fitting and assembly step of exchange...
+ CPU time [min]: 14186.279                   Wall time [min]:   225.837
+ 
+ Second step of Coulomb...
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 14232.951                   Wall time [min]:   226.459
+ 
+ Calculating the exchange-correlation matrix...
+      1.0000*HYB_GGA_XC_WB97X [au]:  -1022.858913591225
+ Exchange-correlation energy  [au]:  -1022.858913591225
+ CPU time [min]: 14770.033                   Wall time [min]:   233.725
+ 
+ Coulomb energy + HF exchange [au]:  57992.482735966783
+ Gradient norm:      3.8882E-06
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000000121524
+ RMS of difference density:                            0.00001079611788
+ Gap [au]:  0.21205445
+ ALPHA OCC: 503
+ BETA  OCC: 503
+ 
+ ***KOHN-SHAM ENERGY IN STEP   8 IS         -37385.4059789339517010 [AU]
+ ======================================================================
+ ITERATION STEP   9
+ CPU time [min]: 14775.213                   Wall time [min]:   233.895
+ 
+ Constructing Fock-matrix...
+ 
+ First step of Coulomb + first step of exchange...
+ Exchange contribution is evaluated for MOs 1 to 503.
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 17532.554                   Wall time [min]:   278.304
+ 
+ Fitting and assembly step of exchange...
+ CPU time [min]: 18314.782                   Wall time [min]:   289.856
+ 
+ Calculation of two-electron integrals (long range)...
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 21064.223                   Wall time [min]:   334.119
+ 
+ Fitting and assembly step of exchange...
+ CPU time [min]: 21379.450                   Wall time [min]:   339.099
+ 
+ Second step of Coulomb...
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 21424.641                   Wall time [min]:   339.697
+ 
+ Calculating the exchange-correlation matrix...
+      1.0000*HYB_GGA_XC_WB97X [au]:  -1022.858914953043
+ Exchange-correlation energy  [au]:  -1022.858914953043
+ CPU time [min]: 21962.302                   Wall time [min]:   346.964
+ 
+ Coulomb energy + HF exchange [au]:  57992.482760477025
+ Gradient norm:      1.7544E-06
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000000051724
+ RMS of difference density:                            0.00000599497275
+ Gap [au]:  0.21205403
+ ALPHA OCC: 503
+ BETA  OCC: 503
+ 
+ ***KOHN-SHAM ENERGY IN STEP   9 IS         -37385.4059789352613734 [AU]
+ ======================================================================
+ ITERATION STEP  10
+ CPU time [min]: 21967.505                   Wall time [min]:   347.148
+ 
+ Constructing Fock-matrix...
+ 
+ First step of Coulomb + first step of exchange...
+ Exchange contribution is evaluated for MOs 1 to 503.
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 24673.276                   Wall time [min]:   390.919
+ 
+ Fitting and assembly step of exchange...
+ CPU time [min]: 25223.842                   Wall time [min]:   399.201
+ 
+ Calculation of two-electron integrals (long range)...
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 27918.391                   Wall time [min]:   442.783
+ 
+ Fitting and assembly step of exchange...
+ CPU time [min]: 28228.984                   Wall time [min]:   447.616
+ 
+ Second step of Coulomb...
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 28275.553                   Wall time [min]:   448.234
+ 
+ Calculating the exchange-correlation matrix...
+      1.0000*HYB_GGA_XC_WB97X [au]:  -1022.858915310365
+ Exchange-correlation energy  [au]:  -1022.858915310365
+ CPU time [min]: 28814.284                   Wall time [min]:   455.520
+ 
+ Coulomb energy + HF exchange [au]:  57992.482811559159
+ Gradient norm:      1.5082E-06
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000000051652
+ RMS of difference density:                            0.00000767133189
+ Gap [au]:  0.21205400
+ ALPHA OCC: 503
+ BETA  OCC: 503
+ 
+ ***KOHN-SHAM ENERGY IN STEP  10 IS         -37385.4059789313469082 [AU]
+ ======================================================================
+ ITERATION STEP  11
+ CPU time [min]: 28819.490                   Wall time [min]:   455.690
+ 
+ Constructing Fock-matrix...
+ 
+ First step of Coulomb + first step of exchange...
+ Exchange contribution is evaluated for MOs 1 to 503.
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 31511.302                   Wall time [min]:   499.228
+ 
+ Fitting and assembly step of exchange...
+ CPU time [min]: 32117.526                   Wall time [min]:   508.435
+ 
+ Calculation of two-electron integrals (long range)...
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 34797.692                   Wall time [min]:   551.768
+ 
+ Fitting and assembly step of exchange...
+ CPU time [min]: 35106.081                   Wall time [min]:   556.528
+ 
+ Second step of Coulomb...
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 35152.636                   Wall time [min]:   557.144
+ 
+ Calculating the exchange-correlation matrix...
+      1.0000*HYB_GGA_XC_WB97X [au]:  -1022.858915386447
+ Exchange-correlation energy  [au]:  -1022.858915386447
+ CPU time [min]: 35692.276                   Wall time [min]:   564.438
+ 
+ Coulomb energy + HF exchange [au]:  57992.482801542705
+ Gradient norm:      1.4861E-06
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000000037950
+ RMS of difference density:                            0.00000825348986
+ Gap [au]:  0.21205409
+ ALPHA OCC: 503
+ BETA  OCC: 503
+ 
+ ***KOHN-SHAM ENERGY IN STEP  11 IS         -37385.4059789320308482 [AU]
+ ======================================================================
+ ITERATION STEP  12
+ CPU time [min]: 35697.549                   Wall time [min]:   564.594
+ 
+ Constructing Fock-matrix...
+ 
+ First step of Coulomb + first step of exchange...
+ Exchange contribution is evaluated for MOs 1 to 503.
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 38359.471                   Wall time [min]:   607.651
+ 
+ Fitting and assembly step of exchange...
+ CPU time [min]: 38962.177                   Wall time [min]:   616.794
+ 
+ Calculation of two-electron integrals (long range)...
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 41612.828                   Wall time [min]:   659.662
+ 
+ Fitting and assembly step of exchange...
+ CPU time [min]: 41917.086                   Wall time [min]:   664.351
+ 
+ Second step of Coulomb...
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 41963.704                   Wall time [min]:   664.968
+ 
+ Calculating the exchange-correlation matrix...
+      1.0000*HYB_GGA_XC_WB97X [au]:  -1022.858915421679
+ Exchange-correlation energy  [au]:  -1022.858915421679
+ CPU time [min]: 42503.702                   Wall time [min]:   672.269
+ 
+ Coulomb energy + HF exchange [au]:  57992.482794628522
+ Gradient norm:      9.9579E-07
+ DIIS is running in this iteration step.
+ RMS of [F,P]:                                         0.00000000026066
+ RMS of difference density:                            0.00000555740837
+ Gap [au]:  0.21205424
+ ALPHA OCC: 503
+ BETA  OCC: 503
+ 
+ ***KOHN-SHAM ENERGY IN STEP  12 IS         -37385.4059789337188704 [AU]
+ ======================================================================
+ ITERATION STEP  13
+ CPU time [min]: 42508.931                   Wall time [min]:   672.414
+ 
+ Constructing Fock-matrix...
+ 
+ First step of Coulomb + first step of exchange...
+ Exchange contribution is evaluated for MOs 1 to 503.
+   1% done.
+  12% done.
+  23% done.
+  34% done.
+  45% done.
+  56% done.
+  67% done.
+  78% done.
+  89% done.
+ 100% done.
+ CPU time [min]: 45137.629                   Wall time [min]:   714.948
+ 
+ Fitting and assembly step of exchange...
