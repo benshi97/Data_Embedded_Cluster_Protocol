@@ -26,9 +26,6 @@ plt.rcParams.update({
          "\\usepackage{amsmath}",  
          "\\usepackage{amssymb}",  
          "\\usepackage[mathrm=sym]{unicode-math}", # unicode math setup
-         r"\setmathfont{FiraMath-Regular.otf}",
-         r"\setmainfont[BoldFont={FiraSans-SemiBold.otf}]{FiraSans-Regular.otf}",
-         r"\setmathfont[version=bold]{FiraMath-Bold.otf}",
          r"\newcommand{\minus}{\scalebox{0.5}[1.0]{$-$}}" # serif font via preamble
          ]
 })
