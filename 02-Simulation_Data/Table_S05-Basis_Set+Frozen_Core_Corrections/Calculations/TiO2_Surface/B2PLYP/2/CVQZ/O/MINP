@@ -1,0 +1,27 @@
+calc=B2PLYP
+verbosity=3
+mem=170GB
+symm=off
+unit=angs
+scfiguess=small
+mult=3
+core=1
+
+
+basis=special
+bse_AVQZ
+
+basis_sm=special
+STO-3G
+
+dfbasis_scf=special
+bse_AVQZ_autoaux
+
+dfbasis_cor=special
+aug-cc-pVQZ-RI
+
+unit=angs
+geom=xyz
+1
+
+O     0.00000000000    0.00000000000    0.00000000000

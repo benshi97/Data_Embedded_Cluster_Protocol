@@ -1,0 +1,39 @@
+SYSTEM=TiO2-rutile
+ISMEAR=0
+SIGMA=0.05
+EDIFF=1E-6
+ALGO=D
+
+ISTART=0
+
+IBRION=2
+NSW=200
+EDIFFG=-0.01
+ISIF=3
+
+#IBRION=1
+#EDIFFG=-0.01
+#NSW=250
+
+ENCUT=600
+PREC=Accurate  #default (Normal) usually safe, structures/energies change little with Accurate
+LASPH=.TRUE.
+LREAL=.FALSE.
+ISPIN=2
+MAGMOM = 6*1.0
+NELM=60
+NELMIN=4
+NCORE=20
+
+#NPAR=2
+LWAVE=.TRUE.
+LCHARG=.FALSE.
+
+LHFCALC=.TRUE.
+PRECFOCK=Normal  #default is Normal, which is expensive
+HFSCREEN=0.2
+
+
+LORBIT=11
+#NEDOS=1001
+

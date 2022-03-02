@@ -1,22 +1,11 @@
-from matplotlib.ticker import FormatStrFormatter
 import pandas as pd
 
 import numpy as np
-import matplotlib.mlab as mlab
-from matplotlib.gridspec import GridSpec
-from matplotlib.ticker import FormatStrFormatter
 from matplotlib.ticker import (MultipleLocator, AutoMinorLocator)
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-from matplotlib.ticker import AutoMinorLocator
-import matplotlib as mpl
-mpl.use("pgf")
 import matplotlib.pyplot as plt
-plt.rcParams.update({
-    "font.family": "serif",  # use serif/main font for text elements
-    "font.size": 9,
-    "text.usetex": True,     # use inline math for ticks
-    "pgf.rcfonts": False,    # don't setup fonts from rc parameters
-})
+
+plt.rcParams['text.usetex'] = True
+plt.rcParams.update({'font.size': 9})
 import extrapolate
 
 Hartree = 27.211386245988
@@ -59,7 +48,7 @@ def find_energy(filename,typ='ccsdt',code_format='mrcc'):
         elif typ == 'ccsdt':
             search_word = 'CCSD(T) correlation energy [au]:'
         elif typ == 'hf':
-            search_word = 'Reference energy [au]:          '
+            search_word = 'Reference energy [au]:    '
         elif typ == 'lmp2':
             search_word = 'LMP2 correlation energy [au]:         '
         elif typ == 'mp2':
@@ -135,7 +124,7 @@ def find_energy(filename,typ='ccsdt',code_format='mrcc'):
 def get_energy(filepath,system='MgO',basis_list =['SVP','TZVPP', 'QZVPP', 'CVDZ','CVTZ','CVQZ','CV5Z','VDZ','VTZ','VQZ','V5Z'],code_format='mrcc'):
     if code_format=='mrcc':
         if system=='TiO2':
-            basis_list = ['SVP','TZVPP', 'QZVPP', 'CVTZ','VTZ','VQZ']
+            basis_list = ['SVP','TZVPP', 'QZVPP', 'CVTZ','CVQZ','CV5Z','VDZ','VTZ','VQZ','V5Z']
             #['SVP','TZVPP', 'QZVPP', 'CVTZ','CVQZ','CV5Z','VDZ','VTZ','VQZ','V5Z']
 
         energies_dict = dict.fromkeys(basis_list)
@@ -200,31 +189,29 @@ def get_energy(filepath,system='MgO',basis_list =['SVP','TZVPP', 'QZVPP', 'CVDZ'
                 energies_dict[i]['vac_energy']['total_{0}'.format(l)] =  energies_dict[i]['vac_energy']['hf'] + energies_dict[i]['vac_energy'][l]
         return energies_dict
 
-    elif code_format=='orca_mp2':
+    if code_format=='mrcc_can':
         if system=='TiO2':
-            basis_list = ['SVP','TZVPP', 'QZVPP', 'CVTZ','CVQZ','VTZ','VQZ','SVPD','TZVPPD','QZVPPD']
+            basis_list = ['SVP','TZVPP', 'QZVPP', 'CVTZ','VTZ','VQZ']
             #['SVP','TZVPP', 'QZVPP', 'CVTZ','CVQZ','CV5Z','VDZ','VTZ','VQZ','V5Z']
 
         energies_dict = dict.fromkeys(basis_list)
 
         for i in energies_dict:
-            energies_dict[i] = {'perfect': {'hf': 0.0, 'lmp2': 0.0,'lccsd': 0.0,'lccsdt': 0.0, 'total_lmp2': 0.0, 'total_lccsd': 0.0, 'total_lccsdt': 0.0},
-            'defect': {'hf': 0.0, 'lmp2': 0.0,'lccsd': 0.0, 'lccsdt': 0.0, 'total_lmp2': 0.0, 'total_lccsd': 0.0, 'total_lccsdt': 0.0},
-            'O': {'hf': 0.0, 'lmp2': 0.0,'lccsd': 0.0, 'lccsdt': 0.0, 'total_lmp2': 0.0, 'total_lccsd': 0.0, 'total_lccsdt': 0.0},
-            'vac_energy': {'hf': 0.0, 'lmp2': 0.0,'lccsd': 0.0, 'lccsdt': 0.0, 'total_lmp2': 0.0, 'total_lccsd': 0.0, 'total_lccsdt': 0.0}}
+            energies_dict[i] = {'perfect': {'hf': 0.0, 'ccsdt': 0.0, 'total': 0.0},
+            'defect': {'hf': 0.0, 'ccsdt': 0.0, 'total': 0.0},
+            'O': {'hf': 0.0, 'ccsdt': 0.0, 'total': 0.0},
+            'vac_energy': {'hf': 0.0, 'ccsdt': 0.0, 'total': 0.0}}
+
         
         for index, i in enumerate(basis_list):
             for j in ['perfect','defect', 'O']:
-                for k in ['hf','lmp2']:
-                    energies_dict[i][j][k] = find_energy('{0}/{1}/{2}/orca.out'.format(filepath,i,j),typ=k,code_format='orca_mp2')
-                energies_dict[i][j]['total_lmp2'] = energies_dict[i][j]['hf'] + energies_dict[i][j]['lmp2']
+                for k in ['hf','ccsdt']:
+                    energies_dict[i][j][k] = find_energy('{0}/{1}/{2}/mrcc.out'.format(filepath,i,j),typ=k)
+                energies_dict[i][j]['total'] = energies_dict[i][j]['hf'] + energies_dict[i][j]['ccsdt']
 
             energies_dict[i]['vac_energy']['hf'] = (energies_dict[i]['defect']['hf'] + energies_dict[i]['O']['hf'] - energies_dict[i]['perfect']['hf'])*Hartree
-            for l in ['lmp2']:
-                energies_dict[i]['vac_energy'][l] = (energies_dict[i]['defect'][l] \
-                    + energies_dict[i]['O'][l] - energies_dict[i]['perfect'][l])*Hartree
-                energies_dict[i]['vac_energy']['total_{0}'.format(l)] =  energies_dict[i]['vac_energy']['hf'] + energies_dict[i]['vac_energy'][l]
-
+            energies_dict[i]['vac_energy']['ccsdt'] = (energies_dict[i]['defect']['ccsdt'] + energies_dict[i]['O']['ccsdt'] - energies_dict[i]['perfect']['ccsdt'])*Hartree
+            energies_dict[i]['vac_energy']['total'] =  energies_dict[i]['vac_energy']['hf'] + energies_dict[i]['vac_energy']['ccsdt']
         return energies_dict
 
 
@@ -273,50 +260,75 @@ def get_corr_mrcc_b2plyp(folder):
     data_smaller_def2_cbs = extrapolate.get_cbs(ene_vac_hf[0],ene_vac_mp2[0],ene_vac_hf[1],ene_vac_mp2[1],X=3,Y=4,family='def2',output=False)
     return (data_smaller_cc_cbs[2], data_smaller_def2_cbs[2],data_smaller_cc_cbs[2] - data_smaller_def2_cbs[2])    
 
-def get_corr_TiO2_surf(filename,method):
+def get_energy_extrapolation(energies_dict,system='MgO',output=True,code_format='mrcc'):
 
-    if method=='lmp2':
-        data_smaller = get_energy(filename,system='MgO',basis_list=['TZVPP','QZVPP','CVTZ','CVQZ'],code_format='orca_mp2')
-    else:
-        data_smaller = get_energy(filename,system='MgO',basis_list=['TZVPP','QZVPP','CVTZ','CVQZ'],code_format='orca')
-    data_smaller_def2_cbs = extrapolate.get_cbs(data_smaller['TZVPP']['vac_energy']['hf'],data_smaller['TZVPP']['vac_energy'][method],\
-        data_smaller['QZVPP']['vac_energy']['hf'],data_smaller['QZVPP']['vac_energy'][method],X=3,Y=4,family='def2',convert_Hartree=False ,shift=-5.21/2,output=False)
+    X = 'SVP'
+    Y = 'TZVPP'
 
-    data_smaller_cc_cbs = extrapolate.get_cbs(data_smaller['CVTZ']['vac_energy']['hf'],data_smaller['CVTZ']['vac_energy'][method],\
-            data_smaller['CVQZ']['vac_energy']['hf'],data_smaller['CVQZ']['vac_energy'][method],X=3,Y=4,family='mixcc',convert_Hartree=False ,shift=-5.21/2,output=False)
-    # print(data_smaller_cc_cbs[2], data_smaller_def2_cbs[2],data_smaller_cc_cbs[2] - data_smaller_def2_cbs[2])
-    return (data_smaller_cc_cbs[2], data_smaller_def2_cbs[2],data_smaller_cc_cbs[2] - data_smaller_def2_cbs[2])
+    a,b,cbs1 = extrapolate.get_cbs(energies_dict['SVP']['vac_energy']['hf'],energies_dict['SVP']['vac_energy']['lccsdt'],\
+    energies_dict['TZVPP']['vac_energy']['hf'],energies_dict['TZVPP']['vac_energy']['lccsdt'],X=2,Y=3,family='def2',convert_Hartree=False,shift=0.0,output=False)
 
-def get_corr_TiO2_Surf_b2plyp(folder):
-    ene_vac_hf = []
-    ene_vac_mp2 = []
-    i='lmp2'
-    for j in ['TZ','QZ']:
-        ene_perfect = find_energy('{0}/CV{1}/perfect/orca.out'.format(folder,j),typ='hf',code_format='orca_mp2')
-        ene_defect = find_energy('{0}/CV{1}/defect/orca.out'.format(folder,j),typ='hf',code_format='orca_mp2')
-        ene_O = find_energy('{0}/CV{1}/O/orca.out'.format(folder,j),typ='hf',code_format='orca_mp2')
-        ene_vac_hf += [(ene_defect + ene_O - ene_perfect)*Hartree]
-        ene_perfect = find_energy('{0}/CV{1}/perfect/orca.out'.format(folder,j),typ='{0}'.format(i),code_format='orca_mp2')
-        ene_defect = find_energy('{0}/CV{1}/defect/orca.out'.format(folder,j),typ='{0}'.format(i),code_format='orca_mp2')
-        ene_O = find_energy('{0}/CV{1}/O/orca.out'.format(folder,j),typ='{0}'.format(i),code_format='orca_mp2')
-        # print(ene_perfect,ene_defect,ene_O)
-        ene_vac_mp2 += [(ene_defect + ene_O - ene_perfect)*Hartree]
-    data_smaller_cc_cbs = extrapolate.get_cbs(ene_vac_hf[0],ene_vac_mp2[0],ene_vac_hf[1],ene_vac_mp2[1],X=3,Y=4,family='mixcc',output=False)
-    ene_vac_hf = []
-    ene_vac_mp2 = []
-    i='lmp2'
-    for j in ['TZ','QZ']:
-        ene_perfect = find_energy('{0}/{1}VPP/perfect/orca.out'.format(folder,j),typ='hf',code_format='orca_mp2')
-        ene_defect = find_energy('{0}/{1}VPP/defect/orca.out'.format(folder,j),typ='hf',code_format='orca_mp2')
-        ene_O = find_energy('{0}/{1}VPP/O/orca.out'.format(folder,j),typ='hf',code_format='orca_mp2')
-        ene_vac_hf += [(ene_defect + ene_O - ene_perfect)*Hartree]
-        ene_perfect = find_energy('{0}/{1}VPP/perfect/orca.out'.format(folder,j),typ='{0}'.format(i),code_format='orca_mp2')
-        ene_defect = find_energy('{0}/{1}VPP/defect/orca.out'.format(folder,j),typ='{0}'.format(i),code_format='orca_mp2')
-        ene_O = find_energy('{0}/{1}VPP/O/orca.out'.format(folder,j),typ='{0}'.format(i),code_format='orca_mp2')
-        # print(ene_perfect,ene_defect,ene_O)
-        ene_vac_mp2 += [(ene_defect + ene_O - ene_perfect)*Hartree]
-    data_smaller_def2_cbs = extrapolate.get_cbs(ene_vac_hf[0],ene_vac_mp2[0],ene_vac_hf[1],ene_vac_mp2[1],X=3,Y=4,family='def2',output=False)
-    return (data_smaller_cc_cbs[2], data_smaller_def2_cbs[2],data_smaller_cc_cbs[2] - data_smaller_def2_cbs[2])
+    X = 'TZVPP'
+    Y = 'QZVPP'
+
+    a,b,cbs2 = extrapolate.get_cbs(energies_dict['TZVPP']['vac_energy']['hf'],energies_dict['TZVPP']['vac_energy']['lccsdt'],\
+    energies_dict['QZVPP']['vac_energy']['hf'],energies_dict['QZVPP']['vac_energy']['lccsdt'],X=3,Y=4,family='def2' ,convert_Hartree=False,shift=0.0,output=False)
+
+    X = 'VDZ'
+    Y = 'VTZ'
+
+    a,b,cbs3 = extrapolate.get_cbs(energies_dict['VDZ']['vac_energy']['hf'],energies_dict['VDZ']['vac_energy']['lccsdt'],\
+    energies_dict['VTZ']['vac_energy']['hf'],energies_dict['VTZ']['vac_energy']['lccsdt'],X=2,Y=3,family='mixcc',convert_Hartree=False,shift=0.0,output=False)
+
+    X = 'VTZ'
+    Y = 'VQZ'
+
+    a,b,cbs4 = extrapolate.get_cbs(energies_dict[X]['vac_energy']['hf'],energies_dict[X]['vac_energy']['lccsdt'],\
+    energies_dict[Y]['vac_energy']['hf'],energies_dict[Y]['vac_energy']['lccsdt'],X=3,Y=4,family='mixcc',convert_Hartree=False,shift=0.0,output=False)
+    
+    X = 'VQZ'
+    Y = 'V5Z'
+
+    a,b,cbs5 = extrapolate.get_cbs(energies_dict[X]['vac_energy']['hf'],energies_dict[X]['vac_energy']['lccsdt'],\
+    energies_dict[Y]['vac_energy']['hf'],energies_dict[Y]['vac_energy']['lccsdt'],X=4,Y=5,family='mixcc',convert_Hartree=False,shift=0.0,output=False)
+
+    if system=='MgO':
+        X = 'CVDZ'
+        Y = 'CVTZ'
+
+        a,b,cbs6 = extrapolate.get_cbs(energies_dict[X]['vac_energy']['hf'],energies_dict[X]['vac_energy']['lccsdt'],\
+        energies_dict[Y]['vac_energy']['hf'],energies_dict[Y]['vac_energy']['lccsdt'],X=2,Y=3,family='mixcc' ,convert_Hartree=False,shift=0.0,output=False)
+
+
+    X = 'CVTZ'
+    Y = 'CVQZ'
+
+    a,b,cbs7 = extrapolate.get_cbs(energies_dict[X]['vac_energy']['hf'],energies_dict[X]['vac_energy']['lccsdt'],\
+    energies_dict[Y]['vac_energy']['hf'],energies_dict[Y]['vac_energy']['lccsdt'],X=3,Y=4,family='mixcc',convert_Hartree=False ,shift=0.0,output=False)
+
+    X = 'CVQZ'
+    Y = 'CV5Z'
+
+    a,b,cbs8 = extrapolate.get_cbs(energies_dict[X]['vac_energy']['hf'],energies_dict[X]['vac_energy']['lccsdt'],\
+    energies_dict[Y]['vac_energy']['hf'],energies_dict[Y]['vac_energy']['lccsdt'],X=4,Y=5,family='mixcc',convert_Hartree=False ,shift=0.0,output=False)
+
+    if output==True:
+        print('{0:12s}: {1:12.7f}'.format('SVP/TZVPP',cbs1))
+        print('{0:12s}: {1:12.7f}'.format('TZVPP/QZVPP',cbs2))
+        print('{0:12s}: {1:12.7f}'.format('VDZ/VTZ',cbs3))
+        print('{0:12s}: {1:12.7f}'.format('VTZ/VQZ',cbs4))
+        print('{0:12s}: {1:12.7f}'.format('VQZ/V5Z',cbs5))
+
+        if system=='MgO':
+            print('{0:12s}: {1:12.7f}'.format('CVDZ/CVTZ',cbs6))
+        
+        print('{0:12s}: {1:12.7f}'.format('CVTZ/CVQZ',cbs7))
+        print('{0:12s}: {1:12.7f}'.format('CVQZ/CV5Z',cbs8))
+
+    if system=='MgO':
+        return [cbs1,cbs2,cbs3,cbs4,cbs5,cbs6,cbs7,cbs8],['SVP/TZVPP','TZVPP/QZVPP','VDZ/VTZ','VTZ/VQZ','VQZ/V5Z','CVDZ/CVTZ','CVTZ/CVQZ','CVQZ/CV5Z']
+    elif system=='TiO2' and code_format=='mrcc':
+        return [cbs1,cbs2,cbs3,cbs4,cbs5,cbs7,cbs8],['SVP/TZVPP','TZVPP/QZVPP','VDZ/VTZ','VTZ/VQZ','VQZ/V5Z','CVTZ/CVQZ','CVQZ/CV5Z']
 
 
 # Scripts for parsing energy from MRCC and ORCA DFT calculations
