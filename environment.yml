@@ -1,6 +1,13 @@
-name: embed_cluster_protocol
 channels:
-  - defaults
+    - conda-forge
 dependencies:
-  - ase
-prefix: /home/shixubenjamin/anaconda3/envs/embed_cluster_protocol
+    - python
+    - ase
+    - pandas
+    - pip
+    - setuptools
+    - matplotlib
+    - jupyterlab
+    - pip:
+      - jupyterlab_latex
+
